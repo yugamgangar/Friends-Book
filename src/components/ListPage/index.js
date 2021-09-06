@@ -43,7 +43,15 @@ function ListPage() {
     }
 
     const addNewFriend = (name) => {
-        if (isValidString(name.trim()) && !checkIfExist(list, name)) {
+        if (value.trim().length === 0) {
+            setErrorMessage("Type your friend's name to add to the list")
+            setSuggestions([])
+        }
+        else if (checkIfExist(list, name)) {
+            setErrorMessage(`${toTitleCase(name)} is already present in the list!`)
+            setSuggestions([])
+        }
+        else if (isValidString(name.trim())) {
             let tempList = [...list]
             tempList.push({
                 name: toTitleCase(name),
@@ -56,9 +64,6 @@ function ListPage() {
 
             const totalPages = Math.ceil(tempList.length / 4)
             currentPageNo !== totalPages && setCurrentPageNo(totalPages)
-        } else {
-            setErrorMessage(`${toTitleCase(name)} is already present in the list!`)
-            setSuggestions([])
         }
     }
 
