@@ -15,9 +15,7 @@ function ListPage() {
     const [sorted, setSorted] = useState(false)
 
     useEffect(() => {
-        const persistedList = localStorage.getItem('friendsBook')
-        const parsedList = JSON.parse(persistedList)
-        setList(parsedList)
+        setListFromLocalStorage()
     }, [])
 
     const setListFromLocalStorage = () => {
