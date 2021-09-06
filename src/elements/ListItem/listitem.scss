@@ -1,0 +1,36 @@
+@import "../../App.scss";
+
+.item-wrapper {
+    display: flex;
+    // justify-content: space-between;
+    padding: 1rem;
+    border-bottom: solid 1px lightgray;
+}
+
+.text {
+    display: block;
+    margin-right: auto;
+    font-size: 14px;
+    .friend-name {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #4776e6;
+    }
+}
+
+.delete-btn {
+    @include button-default;
+    margin-left: 1.2rem;
+    border-width: 1px;
+    svg {
+        height: 1rem;
+    }
+}
+
+.favourite-btn {
+    @include button-default;
+    svg {
+        height: 1rem;
+    }
+}

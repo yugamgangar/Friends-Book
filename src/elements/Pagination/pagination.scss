@@ -1,0 +1,30 @@
+.pagination-bar {
+    padding: 12px;
+    margin-top: 1rem;
+    width: 100%;
+
+    button {
+        background-color: #fff;
+        border-radius: 6px;
+        border: 1px solid #666666;
+        color: #666666;
+        padding: 4px 7px;
+        margin: auto 7px auto 7px;
+        cursor: pointer;
+
+        &:disabled {
+            background-color: #e8e8e8;
+            border: none;
+            cursor: not-allowed;
+        }
+
+        &.active {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+.list-wrapper {
+    min-height: 296px;
+}
