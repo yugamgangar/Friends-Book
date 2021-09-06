@@ -43,7 +43,7 @@ function ListPage() {
     }
 
     const addNewFriend = (name) => {
-        if (value.trim().length === 0) {
+        if (name.trim().length === 0) {
             setErrorMessage("Type your friend's name to add to the list")
             setSuggestions([])
         }
